@@ -42,12 +42,12 @@ dependencies {
     implementation("org.junit.jupiter:junit-jupiter-api:_")
     runtimeOnly("org.junit.jupiter:junit-jupiter-engine:_")
     runtimeOnly("org.junit.vintage:junit-vintage-engine:_")
-    File("lib")
+    File("dependencies")
         .takeIf { it.exists() }
         ?.takeIf { it.isDirectory }
         ?.listFiles()
         ?.filter { it.extension == "jar" }
-        ?.forEach { implementation(files("lib/${it.name}")) }
+        ?.forEach { implementation(files("dependencies/${it.name}")) }
 }
 
 allprojects {
