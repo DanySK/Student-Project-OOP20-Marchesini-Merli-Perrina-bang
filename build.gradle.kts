@@ -21,11 +21,10 @@ sourceSets {
     }
     test {
         java {
-            srcDirs("src")
+            srcDirs("test")
         }
         resources {
-            srcDirs("res")
-            srcDirs("resources")
+            srcDirs("src")
         }
     }
 }
